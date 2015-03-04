@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="none"
+    android:layout_weight="1"
+    android:keepScreenOn="true"
+    android:background="#000000"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal">
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp">
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:gravity="fill_horizontal"
+                    android:textColor="#808080"
+                    android:layout_marginRight="40dp"
+                    android:text="UNKNOWN PATH 00/00"
+                    android:textSize="25dp"
+                    android:id="@+id/UnknownPathTitle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textColor="#ffffff"
+                    android:text="00/00"
+                    android:textSize="18dp"
+                    android:id="@+id/UnknownPathNItem" />
+            </TableRow>
+        </TableLayout>
+        
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"
+            android:textColor="#FF4100"
+            android:text="--"
+            android:textSize="18dp"
+            android:id="@+id/UnknownPathName"
+            android:layout_gravity="center_vertical" />
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/unknownPathMap"
+            android:layout_width="fill_parent"
+            android:layout_height="250dp" />
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="fill_horizontal"
+                    android:textColor="#ff9b9b9b"
+                    android:layout_marginRight="10dp"
+                    android:text="Initial latitude"
+                    android:textSize="12dp"
+                    android:id="@+id/UnknownPathLatitudeInitialText" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:textColor="#ffffff"
+                    android:text="--"
+                    android:textSize="18dp"
+                    android:id="@+id/UnknownPathLatitudeInitialData" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="fill_horizontal"
+                    android:textColor="#ff9b9b9b"
+                    android:layout_marginRight="10dp"
+                    android:text="Initial longitude"
+                    android:textSize="12dp"
+                    android:id="@+id/UnknownPathLongitudeInitialText" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:textColor="#ffffff"
+                    android:text="--"
+                    android:textSize="18dp"
+                    android:id="@+id/UnknownPathLongitudeInitialData" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="fill_horizontal"
+                    android:textColor="#ff9b9b9b"
+                    android:layout_marginRight="10dp"
+                    android:text="Final latitude"
+                    android:textSize="12dp"
+                    android:id="@+id/UnknownPathLatitudeFinalText" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:textColor="#ffffff"
+                    android:text="--"
+                    android:textSize="18dp"
+                    android:id="@+id/UnknownPathLatitudeFinalData" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="fill_horizontal"
+                    android:textColor="#ff9b9b9b"
+                    android:layout_marginRight="10dp"
+                    android:text="Final longitude"
+                    android:textSize="12dp"
+                    android:id="@+id/UnknownPathLongitudeFinalText" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:textColor="#ffffff"
+                    android:text="--"
+                    android:textSize="18dp"
+                    android:id="@+id/UnknownPathLongitudeFinalData" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="fill_horizontal"
+                    android:textColor="#ff9b9b9b"
+                    android:layout_marginRight="10dp"
+                    android:text="Time start"
+                    android:textSize="12dp"
+                    android:id="@+id/UnknownPathTimeStartText" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:textColor="#ffffff"
+                    android:text="--"
+                    android:textSize="18dp"
+                    android:id="@+id/UnknownPathTimeStartData" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="fill_horizontal"
+                    android:textColor="#ff9b9b9b"
+                    android:layout_marginRight="10dp"
+                    android:text="Time stop"
+                    android:textSize="12dp"
+                    android:id="@+id/UnknownPathTimeStopText" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:textColor="#ffffff"
+                    android:text="--"
+                    android:textSize="18dp"
+                    android:id="@+id/UnknownPathTimeStopData" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="fill_horizontal"
+                    android:textColor="#ff9b9b9b"
+                    android:layout_marginRight="10dp"
+                    android:text="Duration"
+                    android:textSize="12dp"
+                    android:id="@+id/UnknownPathDurationText" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:textColor="#ffffff"
+                    android:text="--"
+                    android:textSize="18dp"
+                    android:id="@+id/UnknownPathDurationData" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="fill_horizontal"
+                    android:textColor="#ff9b9b9b"
+                    android:layout_marginRight="10dp"
+                    android:text="Distance"
+                    android:textSize="12dp"
+                    android:id="@+id/UnknownPathDistanceText" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:textColor="#ffffff"
+                    android:text="--"
+                    android:textSize="18dp"
+                    android:id="@+id/UnknownPathDistanceData" />
+            </TableRow>
+
+        </TableLayout>
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="Back"
+            android:onClick="onClickPlaceBack"/>
+
+    </LinearLayout>
+</ScrollView>

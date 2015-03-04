@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="none"
+    android:layout_weight="1"
+    android:keepScreenOn="true"
+    android:background="#000000"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal">
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp">
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:gravity="fill_horizontal"
+                    android:textColor="#FFFF00"
+                    android:layout_marginRight="75dp"
+                    android:text="PLACE 00/00"
+                    android:textSize="35dp"
+                    android:id="@+id/PlaceTitle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textColor="#ffffff"
+                    android:text="00/00"
+                    android:textSize="18dp"
+                    android:id="@+id/PlaceNItem" />
+            </TableRow>
+        </TableLayout>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"
+            android:textColor="#FF4100"
+            android:text="--"
+            android:textSize="18dp"
+            android:id="@+id/PlaceName"
+            android:layout_gravity="center_vertical" />
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/placeMap"
+            android:layout_width="fill_parent"
+            android:layout_height="250dp"/>
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="fill_horizontal"
+                    android:textColor="#ff9b9b9b"
+                    android:layout_marginRight="10dp"
+                    android:text="Latitude"
+                    android:textSize="12dp"
+                    android:id="@+id/PlaceLatitudeText" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:textColor="#ffffff"
+                    android:text="-"
+                    android:textSize="18dp"
+                    android:id="@+id/PlaceLatitudeData" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="fill_horizontal"
+                    android:textColor="#ff9b9b9b"
+                    android:layout_marginRight="10dp"
+                    android:text="Longitude"
+                    android:textSize="12dp"
+                    android:id="@+id/PlaceLongitudeText" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:textColor="#ffffff"
+                    android:text="-"
+                    android:textSize="18dp"
+                    android:id="@+id/PlaceLongitudeData" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="fill_horizontal"
+                    android:textColor="#ff9b9b9b"
+                    android:layout_marginRight="10dp"
+                    android:text="Altitude"
+                    android:textSize="12dp"
+                    android:id="@+id/PlaceAltitudeText" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:textColor="#ffffff"
+                    android:text="-"
+                    android:textSize="18dp"
+                    android:id="@+id/PlaceAltitudeData" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="fill_horizontal"
+                    android:textColor="#ff9b9b9b"
+                    android:layout_marginRight="10dp"
+                    android:text="Address"
+                    android:textSize="12dp"
+                    android:id="@+id/PlaceAddressText" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:textColor="#ffffff"
+                    android:text="-"
+                    android:textSize="18dp"
+                    android:id="@+id/PlaceAddressData" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="fill_horizontal"
+                    android:textColor="#ff9b9b9b"
+                    android:layout_marginRight="10dp"
+                    android:text="Address"
+                    android:textSize="12dp"
+                    android:id="@+id/PlaceFeatureNameText" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:textColor="#ffffff"
+                    android:text="-"
+                    android:textSize="18dp"
+                    android:id="@+id/PlaceFeatureNameData" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="fill_horizontal"
+                    android:textColor="#ff9b9b9b"
+                    android:layout_marginRight="10dp"
+                    android:text="Time arrival"
+                    android:textSize="12dp"
+                    android:id="@+id/PlaceTimeArrivalText" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:textColor="#ffffff"
+                    android:text="-"
+                    android:textSize="18dp"
+                    android:id="@+id/PlaceTimeArrivalData" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="fill_horizontal"
+                    android:textColor="#ff9b9b9b"
+                    android:layout_marginRight="10dp"
+                    android:text="Time departure"
+                    android:textSize="12dp"
+                    android:id="@+id/PlaceTimeDepartureText" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:textColor="#ffffff"
+                    android:text="-"
+                    android:textSize="18dp"
+                    android:id="@+id/PlaceTimeDepartureData" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="fill_horizontal"
+                    android:textColor="#ff9b9b9b"
+                    android:layout_marginRight="10dp"
+                    android:text="Time on place"
+                    android:textSize="12dp"
+                    android:id="@+id/PlaceTimeDurationText" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:textColor="#ffffff"
+                    android:text="-"
+                    android:textSize="18dp"
+                    android:id="@+id/PlaceTimeDurationData" />
+            </TableRow>
+        </TableLayout>
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="Back"
+            android:onClick="onClickPlaceBack"/>
+
+    </LinearLayout>
+</ScrollView>

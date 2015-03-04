@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="none"
+    android:layout_weight="1"
+    android:keepScreenOn="true"
+    android:background="#000000"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal">
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp">
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:gravity="fill_horizontal"
+                    android:textColor="#FF00FF"
+                    android:layout_marginRight="75dp"
+                    android:text="PATH 00/00"
+                    android:textSize="35dp"
+                    android:id="@+id/PathTitle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textColor="#ffffff"
+                    android:text="00/00"
+                    android:textSize="18dp"
+                    android:id="@+id/PathNItem" />
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"
+            android:textColor="#FF4100"
+            android:text="--"
+            android:textSize="18dp"
+            android:id="@+id/PathName"
+            android:layout_gravity="center_vertical" />
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/pathMap"
+            android:layout_width="fill_parent"
+            android:layout_height="250dp" />
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="fill_horizontal"
+                    android:textColor="#ff9b9b9b"
+                    android:layout_marginRight="10dp"
+                    android:text="Activity"
+                    android:textSize="12dp"
+                    android:id="@+id/PathActivityText" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:textColor="#ffffff"
+                    android:text="--"
+                    android:textSize="18dp"
+                    android:id="@+id/PathActivityData" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="fill_horizontal"
+                    android:textColor="#ff9b9b9b"
+                    android:layout_marginRight="10dp"
+                    android:text="Time start"
+                    android:textSize="12dp"
+                    android:id="@+id/PathTimeStartText" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:textColor="#ffffff"
+                    android:text="--"
+                    android:textSize="18dp"
+                    android:id="@+id/PathTimeStartData" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="fill_horizontal"
+                    android:textColor="#ff9b9b9b"
+                    android:layout_marginRight="10dp"
+                    android:text="Time stop"
+                    android:textSize="12dp"
+                    android:id="@+id/PathTimeStopText" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:textColor="#ffffff"
+                    android:text="--"
+                    android:textSize="18dp"
+                    android:id="@+id/PathTimeStopData" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="fill_horizontal"
+                    android:textColor="#ff9b9b9b"
+                    android:layout_marginRight="10dp"
+                    android:text="Duration"
+                    android:textSize="12dp"
+                    android:id="@+id/PathDurationText" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:textColor="#ffffff"
+                    android:text="--"
+                    android:textSize="18dp"
+                    android:id="@+id/PathDurationData" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="fill_horizontal"
+                    android:textColor="#ff9b9b9b"
+                    android:layout_marginRight="10dp"
+                    android:text="Distance"
+                    android:textSize="12dp"
+                    android:id="@+id/PathDistanceText" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:textColor="#ffffff"
+                    android:text="--"
+                    android:textSize="18dp"
+                    android:id="@+id/PathDistanceData" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="fill_horizontal"
+                    android:textColor="#ff9b9b9b"
+                    android:layout_marginRight="10dp"
+                    android:text="Speed average"
+                    android:textSize="12dp"
+                    android:id="@+id/PathSpeedAverageText" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:textColor="#ffffff"
+                    android:text="--"
+                    android:textSize="18dp"
+                    android:id="@+id/PathSpeedAverageData" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="fill_horizontal"
+                    android:textColor="#ff9b9b9b"
+                    android:layout_marginRight="10dp"
+                    android:text="Min speed"
+                    android:textSize="12dp"
+                    android:id="@+id/PathSpeedMinText" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:textColor="#ffffff"
+                    android:text="--"
+                    android:textSize="18dp"
+                    android:id="@+id/PathSpeedMinData" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="fill_horizontal"
+                    android:textColor="#ff9b9b9b"
+                    android:layout_marginRight="10dp"
+                    android:text="Max speed"
+                    android:textSize="12dp"
+                    android:id="@+id/PathSpeedMaxText" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:textColor="#ffffff"
+                    android:text="--"
+                    android:textSize="18dp"
+                    android:id="@+id/PathSpeedMaxData" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="fill_horizontal"
+                    android:textColor="#ff9b9b9b"
+                    android:layout_marginRight="10dp"
+                    android:text="Initial altitude"
+                    android:textSize="12dp"
+                    android:id="@+id/PathAltitudeInitialText" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:textColor="#ffffff"
+                    android:text="--"
+                    android:textSize="18dp"
+                    android:id="@+id/PathAltitudeInitialData" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="fill_horizontal"
+                    android:textColor="#ff9b9b9b"
+                    android:layout_marginRight="10dp"
+                    android:text="Final altitude"
+                    android:textSize="12dp"
+                    android:id="@+id/PathAltitudeFinalText" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:textColor="#ffffff"
+                    android:text="--"
+                    android:textSize="18dp"
+                    android:id="@+id/PathAltitudeFinalData" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="fill_horizontal"
+                    android:textColor="#ff9b9b9b"
+                    android:layout_marginRight="10dp"
+                    android:text="Altitude gain"
+                    android:textSize="12dp"
+                    android:id="@+id/PathAltitudeGainText" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:textColor="#ffffff"
+                    android:text="--"
+                    android:textSize="18dp"
+                    android:id="@+id/PathAltitudeGainData" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="fill_horizontal"
+                    android:textColor="#ff9b9b9b"
+                    android:layout_marginRight="10dp"
+                    android:text="Steps"
+                    android:textSize="12dp"
+                    android:id="@+id/PathStepsText" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:textColor="#ffffff"
+                    android:text="--"
+                    android:textSize="18dp"
+                    android:id="@+id/PathStepsData" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="fill_horizontal"
+                    android:textColor="#ff9b9b9b"
+                    android:layout_marginRight="10dp"
+                    android:text="Number of points"
+                    android:textSize="12dp"
+                    android:id="@+id/PathNPointsText" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:textColor="#ffffff"
+                    android:text="--"
+                    android:textSize="18dp"
+                    android:id="@+id/PathNPointsData" />
+            </TableRow>
+        </TableLayout>
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="Back"
+            android:onClick="onClickPlaceBack"/>
+
+    </LinearLayout>
+</ScrollView>

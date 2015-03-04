@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.ALPHA.nomadadev" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyB66KAOT1Kmf5jDyWySHZYjMyVoPRbAXY8" />
+
+        <service
+            android:name="org.ALPHA.nomadadev.NomadaService"
+            android:label="NomadaService" >
+        </service>
+
+        <activity
+            android:name="org.ALPHA.nomadadev.MainActivity"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="org.ALPHA.nomadadev.MapActivity"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="org.ALPHA.nomadadev.StatsActivity"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="org.ALPHA.nomadadev.TimelineActivity"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="org.ALPHA.nomadadev.SettingsActivity"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="org.ALPHA.nomadadev.ShowPlaceActivity"
+            android:label="@string/title_activity_show_place"
+            android:parentActivityName="org.ALPHA.nomadadev.TimelineActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.ALPHA.nomadadev.TimelineActivity" />
+        </activity>
+        <activity
+            android:name="org.ALPHA.nomadadev.TimeLineDatesActivity"
+            android:label="@string/title_activity_time_line_dates"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="org.ALPHA.nomadadev.TimeLineDayActivity"
+            android:label="@string/title_activity_time_line_day"
+            android:parentActivityName="org.ALPHA.nomadadev.TimeLineDatesActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.ALPHA.nomadadev.TimeLineDatesActivity" />
+        </activity>
+        <activity
+            android:name="org.ALPHA.nomadadev.TimeLineDayDetailActivity"
+            android:label="@string/title_activity_time_line_day_detail"
+            android:parentActivityName="org.ALPHA.nomadadev.TimeLineDayActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.ALPHA.nomadadev.TimeLineDayActivity" />
+        </activity>
+    </application>
+
+</manifest>
